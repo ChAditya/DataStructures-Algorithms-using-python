@@ -1,0 +1,19 @@
+#Linear search using python
+#Funtion for linear search
+def search(l,x): 
+  
+    for i in range (len(l)): 
+        if (l[i] == x): 
+            return i 
+    return -1 
+  
+# Driver Code 
+#arr = [ 2, 3, 4, 10, 40 ]
+arr=input("Enter values into array: ")
+l = list(map(int,arr.split(' ')))
+x=int(input("enter a value to search: "))  
+result = search(l,x) 
+if(result == -1): 
+    print("{} is not present in array".format(x)) 
+else: 
+    print("{} is present at index {}".format(x,result))
